@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jenkin_maven" />
+        <module name="jenkin_maven_2" />
       </profile>
     </annotationProcessing>
   </component>

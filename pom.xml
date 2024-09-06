@@ -24,7 +24,7 @@
         <!-- Global variable for dependencies -->
         <webdriver.version>4.16.1</webdriver.version>
         <testng.version>7.8.0</testng.version>
-        <jackson.version>2.10.0</jackson.version>
+        <jackson.version>2.15.2</jackson.version>
         <aspectj.version>1.9.8</aspectj.version>
         <allure.version>2.24.0</allure.version>
         <extent.version>5.0.8</extent.version>
@@ -36,10 +36,12 @@
     <!-- Quản lí thư viện -->
     <dependencies>
         <!-- TestNG -->
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Selenium Java -->
@@ -122,7 +124,7 @@
             <version>2.11.0</version>
         </dependency>
 
-<!--        <dependency>-->
+        <!--        <dependency>-->
 <!--            <groupId>com.github.javafaker</groupId>-->
 <!--            <artifactId>javafaker</artifactId>-->
 <!--            <version>${faker.version}</version>-->
@@ -140,19 +142,7 @@
 <!--            <version>${aspectj.version}</version>-->
 <!--            <scope>runtime</scope>-->
 <!--        </dependency>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--            <version>2.15.2</version>-->
-<!--        </dependency>-->
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-core</artifactId>-->
-<!--            <version>2.15.2</version>-->
-<!--        </dependency>-->
 
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations &ndash;&gt;-->
 <!--        <dependency>-->
@@ -256,7 +246,7 @@
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-surefire-plugin</artifactId>
-                            <version>2.22.1</version>
+                            <version>3.1.2</version>
                             <configuration>
                                 <!-- Run TestNG xml file -->
                                 <suiteXmlFiles>

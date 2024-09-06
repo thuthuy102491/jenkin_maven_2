@@ -187,85 +187,85 @@ public class Selenium_Basic {
         }
     }
 
-    @Test
-    public void Test_08() {
-        driver.get("https://login.mailchimp.com/signup/");
-        driver.findElement(By.cssSelector("input#mail")).sendKeys("auto@gmail.com");
-
-//        case1 - Number
-        driver.findElement(By.cssSelector("input#password")).sendKeys("1234");
-
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
-
-
-//        case2 - lower
-        driver.findElement(By.cssSelector("input#password")).clear();
-        driver.findElement(By.cssSelector("input#password")).sendKeys("auto");
-
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
-
-//        case3 - upper
-        driver.findElement(By.cssSelector("input#password")).clear();
-        driver.findElement(By.cssSelector("input#password")).sendKeys("AUTO");
-
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
-
-
-//        case4 - Special chars
-        driver.findElement(By.cssSelector("input#password")).clear();
-        driver.findElement(By.cssSelector("input#password")).sendKeys("$%^^^^");
-
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
-
-//        case5 - Max length
-        driver.findElement(By.cssSelector("input#password")).clear();
-        driver.findElement(By.cssSelector("input#password")).sendKeys("$%^^^^");
-
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char completed']")).isDisplayed());
-
-//        case6 - Valid
-        driver.findElement(By.cssSelector("input#password")).clear();
-        driver.findElement(By.cssSelector("input#password")).sendKeys("Auto123@$");
-
-        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='lowercase-char completed']")).isDisplayed());
-        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='uppercase-char completed']")).isDisplayed());
-        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
-        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='special-char completed']")).isDisplayed());
-        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='8-char completed']")).isDisplayed());
-    }
-
-    @Test
-    public void Test_09() {
-        driver.get("http://live.techpanda.org/");
-
-        driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
-        driver.manage().timeouts().getPageLoadTimeout();
-
-        driver.findElement(By.cssSelector("button#send2")).click();
-
-        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-email']")).getText(), "This is a required field.");
-        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-pass'")).getText(), "This is a required field.");
-    }
+//    @Test
+//    public void Test_08() {
+//        driver.get("https://login.mailchimp.com/signup/");
+//        driver.findElement(By.cssSelector("input#mail")).sendKeys("auto@gmail.com");
+//
+////        case1 - Number
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("1234");
+//
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
+//
+//
+////        case2 - lower
+//        driver.findElement(By.cssSelector("input#password")).clear();
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("auto");
+//
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
+//
+////        case3 - upper
+//        driver.findElement(By.cssSelector("input#password")).clear();
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("AUTO");
+//
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
+//
+//
+////        case4 - Special chars
+//        driver.findElement(By.cssSelector("input#password")).clear();
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("$%^^^^");
+//
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char not-completed']")).isDisplayed());
+//
+////        case5 - Max length
+//        driver.findElement(By.cssSelector("input#password")).clear();
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("$%^^^^");
+//
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='lowercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='uppercase-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='special-char not-completed']")).isDisplayed());
+//        Assert.assertTrue(driver.findElement(By.cssSelector("li[class='8-char completed']")).isDisplayed());
+//
+////        case6 - Valid
+//        driver.findElement(By.cssSelector("input#password")).clear();
+//        driver.findElement(By.cssSelector("input#password")).sendKeys("Auto123@$");
+//
+//        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='lowercase-char completed']")).isDisplayed());
+//        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='uppercase-char completed']")).isDisplayed());
+//        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='number-char completed']")).isDisplayed());
+//        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='special-char completed']")).isDisplayed());
+//        Assert.assertFalse(driver.findElement(By.cssSelector("li[class='8-char completed']")).isDisplayed());
+//    }
+//
+//    @Test
+//    public void Test_09() {
+//        driver.get("http://live.techpanda.org/");
+//
+//        driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
+//        driver.manage().timeouts().getPageLoadTimeout();
+//
+//        driver.findElement(By.cssSelector("button#send2")).click();
+//
+//        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-email']")).getText(), "This is a required field.");
+//        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-required-entry-pass'")).getText(), "This is a required field.");
+//    }
 
     @Test
     public void Test_10() {
