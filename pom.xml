@@ -268,7 +268,7 @@
                             <configuration>
                                 <!-- Run TestNG xml file -->
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>src/test/resources/testing.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/newCustomer.xml</suiteXmlFile>
                                 </suiteXmlFiles>
 
                                 <!-- Argument -->

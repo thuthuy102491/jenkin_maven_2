@@ -14,7 +14,7 @@
         <parameter name="version" value="lastest"/>
         <classes>
             <class name="guruAccount.Payment"/>
-<!--            <class name="guruAccount.New_Customer"/>-->
+            <class name="guruAccount.New_Customer"/>
         </classes>
     </test>
 </suite>
