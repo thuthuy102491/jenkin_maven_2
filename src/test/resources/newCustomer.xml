@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Selenium Webdriver" verbose="1">
 
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ExtentTestListener"/>
+    </listeners>
+
     <parameter name="environment" value="dev"/>
 
     <test name="Run on Firefox browser">
@@ -8,7 +13,8 @@
         <parameter name="url" value="https://demo.guru99.com/v4"/>
         <parameter name="version" value="lastest"/>
         <classes>
-
+            <class name="guruAccount.Payment"/>
+<!--            <class name="guruAccount.New_Customer"/>-->
         </classes>
     </test>
 </suite>
