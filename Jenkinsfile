@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Report') {
+      steps {
+        testNG(failedFails: 1, failedSkips: 1, failureOnFailedTestConfig: true, reportFilenamePattern: 'ReportMaven', showFailedBuilds: true, thresholdMode: 1)
+      }
+    }
+
   }
 }
