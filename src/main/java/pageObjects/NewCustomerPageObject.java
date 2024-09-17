@@ -74,7 +74,9 @@ public class NewCustomerPageObject extends PageActions {
         pressKeyToElement(driver, NewCustomerUI.INPUT_DYNAMIC, Keys.TAB, labelName);
     }
 
-    public String getErrorMessage(String labelName) {
+    public String getErrorMessage(String labelName) throws InterruptedException {
+        Thread.sleep(1000);
+        waitForElementVisible(driver, NewCustomerUI.LABEL_DYNAMIC, labelName);
         return getElementText(driver, NewCustomerUI.LABEL_DYNAMIC, labelName);
     }
 
@@ -100,6 +102,10 @@ public class NewCustomerPageObject extends PageActions {
 
     public void enterDataToMobileField(String str) {
         sendkeyToElement(driver, NewCustomerUI.CUSTOMER_MOBILE_NUMBER, str);
+    }
+
+    public void enterDataToEmailField(String str) {
+        sendkeyToElement(driver, NewCustomerUI.CUSTOMER_EMAIL, str);
     }
 
     public String getCustomerFieldName() {
