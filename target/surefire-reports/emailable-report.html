@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Selenium Webdriver</th></tr>
+<tr><td><a href="#t0">Run on Firefox browser</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">15,683</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Selenium Webdriver</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on Firefox browser &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">guruAccount.New_Customer</td><td><a href="#m0">Test_04_Verify_State_Field</a></td><td rowspan="1">1726565832041</td><td rowspan="1">200</td></tr><tr class="failedeven"><td><a href="#m1">Test_05_Verify_PIN_Field</a></td><td rowspan="1">1726565832343</td><td rowspan="1">194</td></tr><tr class="failedeven"><td><a href="#m2">Test_06_Verify_Mobile_Field</a></td><td rowspan="1">1726565832592</td><td rowspan="1">222</td></tr><tr class="failedeven"><td><a href="#m3">Test_07_Verify_Email_Field</a></td><td rowspan="1">1726565832881</td><td rowspan="1">161</td></tr><tr class="failedeven"><td><a href="#m4">Test_08_Verify_Field_Label</a></td><td rowspan="1">1726565833091</td><td rowspan="1">83</td></tr><tr><th colspan="4">Run on Firefox browser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">guruAccount.New_Customer</td><td><a href="#m5">Test_01_Verify_Name_Field</a></td><td rowspan="1">1726565830225</td><td rowspan="1">1041</td></tr><tr class="passedeven"><td><a href="#m6">Test_02_Verify_Address_Field</a></td><td rowspan="1">1726565831446</td><td rowspan="1">268</td></tr><tr class="passedeven"><td><a href="#m7">Test_03_Verify_City_Field</a></td><td rowspan="1">1726565831717</td><td rowspan="1">322</td></tr><tr class="passedodd"><td rowspan="2">guruAccount.Payment</td><td><a href="#m8">Test_01_Create_Customer_Account</a></td><td rowspan="1">1726565829425</td><td rowspan="1">2010</td></tr><tr class="passedodd"><td><a href="#m9">Test_02_Edit_Customer_Account</a></td><td rowspan="1">1726565831446</td><td rowspan="1">1380</td></tr></tbody>
+</table>
+<h2>Run on Firefox browser</h2><h3 id="m0">guruAccount.New_Customer#Test_04_Verify_State_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_04_Verify_State_Field(java.lang.reflect.Method)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [State Field must not be blank] but found [State must not be blank]
+	at guruAccount.New_Customer.Test_04_Verify_State_Field(New_Customer.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">guruAccount.New_Customer#Test_05_Verify_PIN_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_05_Verify_PIN_Field(java.lang.reflect.Method)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [PIN Code must not be blank] but found [Characters are not allowed]
+	at guruAccount.New_Customer.Test_05_Verify_PIN_Field(New_Customer.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">guruAccount.New_Customer#Test_06_Verify_Mobile_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_06_Verify_Mobile_Field(java.lang.reflect.Method)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Telephone cannot have space] but found [Characters are not allowed]
+	at guruAccount.New_Customer.Test_06_Verify_Mobile_Field(New_Customer.java:153)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">guruAccount.New_Customer#Test_07_Verify_Email_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_07_Verify_Email_Field(java.lang.reflect.Method)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Mobile no must not be blank] but found [Email-ID must not be blank]
+	at guruAccount.New_Customer.Test_07_Verify_Email_Field(New_Customer.java:169)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">guruAccount.New_Customer#Test_08_Verify_Field_Label</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_08_Verify_Field_Label(java.lang.reflect.Method)</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Mobile Number] but found []
+	at guruAccount.New_Customer.Test_08_Verify_Field_Label(New_Customer.java:200)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">guruAccount.New_Customer#Test_01_Verify_Name_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_01_Verify_Name_Field(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">guruAccount.New_Customer#Test_02_Verify_Address_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_02_Verify_Address_Field(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">guruAccount.New_Customer#Test_03_Verify_City_Field</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.New_Customer.Test_03_Verify_City_Field(java.lang.reflect.Method)</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">guruAccount.Payment#Test_01_Create_Customer_Account</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.Payment.Test_01_Create_Customer_Account(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">guruAccount.Payment#Test_02_Edit_Customer_Account</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void guruAccount.Payment.Test_02_Edit_Customer_Account(java.lang.reflect.Method) throws java.lang.InterruptedException</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

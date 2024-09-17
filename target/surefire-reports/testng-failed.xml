@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Selenium Webdriver]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="dev"/>
+  <listeners>
+    <listener class-name="commons.MethodListener"/>
+    <listener class-name="reportConfig.ExtentTestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="Run on Firefox browser(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="version" value="lastest"/>
+    <parameter name="url" value="https://demo.guru99.com/v4"/>
+    <classes>
+      <class name="guruAccount.New_Customer">
+        <methods>
+          <include name="Test_05_Verify_PIN_Field" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="Test_04_Verify_State_Field" invocation-numbers="0"/>
+          <include name="Test_08_Verify_Field_Label" invocation-numbers="0"/>
+          <include name="afterClass"/>
+          <include name="Test_07_Verify_Email_Field" invocation-numbers="0"/>
+          <include name="Test_06_Verify_Mobile_Field" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- guruAccount.New_Customer -->
+    </classes>
+  </test> <!-- Run on Firefox browser(failed) -->
+</suite> <!-- Failed suite [Selenium Webdriver] -->
