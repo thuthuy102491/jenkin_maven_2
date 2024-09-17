@@ -131,7 +131,7 @@ public class NewCustomerPageObject extends PageActions {
     }
 
     public String getMobileFieldName() {
-        return getElementText(driver, NewCustomerUI.CUSTOMER_MOBILE_NUMBER);
+        return getElementText(driver, NewCustomerUI.CUSTOMER_MOBILE_NUMBER_LABEL);
     }
 
     public String getEmailFieldName() {

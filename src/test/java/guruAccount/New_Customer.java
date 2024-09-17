@@ -94,7 +94,7 @@ public class New_Customer extends BaseTest {
     public void Test_04_Verify_State_Field(Method method) {
         ExtentTestManager.startTest(method.getName() + "Run on" + browserName.toUpperCase(), "Test_04_Verify_State_Field");
         newCustomerPageObject.TabAndMoveToNextField("State");
-        Assert.assertEquals(newCustomerPageObject.getErrorMessage("State"), "State Field must not be blank");
+        Assert.assertEquals(newCustomerPageObject.getErrorMessage("State"), "State must not be blank");
 
         newCustomerPageObject.enterDataToStateField("1234");
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("State"), "Numbers are not allowed");
@@ -119,7 +119,7 @@ public class New_Customer extends BaseTest {
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("PIN"), "Characters are not allowed");
 
         newCustomerPageObject.TabAndMoveToNextField("PIN");
-        Assert.assertEquals(newCustomerPageObject.getErrorMessage("PIN"), "PIN Code must not be blank");
+        Assert.assertEquals(newCustomerPageObject.getErrorMessage("PIN"), "Characters are not allowed");
 
         newCustomerPageObject.enterDataToPINField("123");
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("PIN"), "PIN Code must have 6 Digits");
@@ -150,7 +150,7 @@ public class New_Customer extends BaseTest {
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("Mobile Number"), "First character can not have space");
 
         newCustomerPageObject.enterDataToMobileField("12 345");
-        Assert.assertEquals(newCustomerPageObject.getErrorMessage("Mobile Number"), "Telephone cannot have space");
+        Assert.assertEquals(newCustomerPageObject.getErrorMessage("Mobile Number"), "Characters are not allowed");
 
         newCustomerPageObject.enterDataToMobileField("!@#1234123");
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("Mobile Number"), "Special characters are not allowed");
@@ -166,7 +166,7 @@ public class New_Customer extends BaseTest {
     public void Test_07_Verify_Email_Field(Method method) {
         ExtentTestManager.startTest(method.getName() + "Run on" + browserName.toUpperCase(), "Test_07_Verify_Email_Field");
         newCustomerPageObject.TabAndMoveToNextField("E-mail");
-        Assert.assertEquals(newCustomerPageObject.getErrorMessage("E-mail"), "Mobile no must not be blank");
+        Assert.assertEquals(newCustomerPageObject.getErrorMessage("E-mail"), "Email-ID must not be blank");
 
         newCustomerPageObject.enterDataToMobileField(" ");
         Assert.assertEquals(newCustomerPageObject.getErrorMessage("E-mail"), "First character can not have space");
